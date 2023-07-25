@@ -57,7 +57,7 @@ Deleted branch test (was 1296a4e).
 
 <h1> Exercises 2 </h1>
 
-1
+
 ```
 $ touch home.html
 
@@ -188,5 +188,143 @@ M	about.html
 M	home.html
 M	team.html
 $ 
+
+```
+
+<h1>Bundle 2</h1>
+
+<h2>Exercises 1</h2>
+
+```
+$ git checkout -b ft/bundle-2
+Switched to a new branch 'ft/bundle-2'
+
+$ git add services.html 
+
+$ git commit -m "add service.html"
+[ft/bundle-2 1ae4391] add service.html
+ 1 file changed, 11 insertions(+)
+ create mode 100644 services.html
+
+$ git push -u origin ft/bundle-2
+Username for 'https://github.com': yves137
+Password for 'https://yves137@github.com': 
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 426 bytes | 213.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'ft/bundle-2' on GitHub by visiting:
+remote:      https://github.com/yves137/bundle1/pull/new/ft/bundle-2
+remote: 
+To https://github.com/yves137/bundle1.git
+ * [new branch]      ft/bundle-2 -> ft/bundle-2
+Branch 'ft/bundle-2' set up to track remote branch 'ft/bundle-2' from 'origin'.
+
+```
+
+<h2>Exercises 2</h2>
+
+```
+$ git checkout main 
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+$ git pull
+Already up to date.
+
+$ git checkout -b ft/service-redesign
+Switched to a new branch 'ft/service-redesign'
+
+$ git add services.html
+
+$ git commit -m "update service.html"
+[ft/service-redesign 06d1e17] update service.html
+ 1 file changed, 12 insertions(+)
+ create mode 100644 services.html
+
+$ git push -u origin ft/service-redesign
+Username for 'https://github.com': yves137
+Password for 'https://yves137@github.com': 
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 452 bytes | 452.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'ft/service-redesign' on GitHub by visiting:
+remote:      https://github.com/yves137/bundle1/pull/new/ft/service-redesign
+remote: 
+To https://github.com/yves137/bundle1.git
+ * [new branch]      ft/service-redesign -> ft/service-redesign
+Branch 'ft/service-redesign' set up to track remote branch 'ft/service-redesign' from 'origin'.
+
+$ git checkout main 
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+$ git add services.html 
+
+$ git commit -m "service changes on main branh"
+[main 962a1b3] service changes on main branh
+ 1 file changed, 12 insertions(+)
+ create mode 100644 services.html
+
+$ git push
+Username for 'https://github.com': yves137
+Password for 'https://yves137@github.com': 
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 467 bytes | 116.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/yves137/bundle1.git
+   9c60637..962a1b3  main -> main
+
+$ git checkout ft/service-redesign 
+Switched to branch 'ft/service-redesign'
+Your branch is up to date with 'origin/ft/service-redesign'.
+
+$ git diff main 
+diff --git a/services.html b/services.html
+index 7a413ee..70528f9 100644
+--- a/services.html
++++ b/services.html
+@@ -7,6 +7,6 @@
+ </head>
+ <body>
+     <h1>Service</h1>
+-    <p>some update on bundle 2-1 in main branch</p>
++    <p>some update on bundle 2-1</p>
+ </body>
+ </html>
+\ No newline at end of file
+
+$ git merge main
+Auto-merging services.html
+CONFLICT (add/add): Merge conflict in services.html
+Automatic merge failed; fix conflicts and then commit the result.
+  
+$ git add .
+
+$ git commit -m "ft/service with main"
+[ft/service-redesign 0edeca3] ft/service with main
+   
+$ git push
+Username for 'https://github.com': yves137
+Password for 'https://yves137@github.com': 
+Enumerating objects: 1, done.
+Counting objects: 100% (1/1), done.
+Writing objects: 100% (1/1), 218 bytes | 218.00 KiB/s, done.
+Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/yves137/bundle1.git
+   06d1e17..0edeca3  ft/service-redesign -> ft/service-redesign
 
 ```
