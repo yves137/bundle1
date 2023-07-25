@@ -57,7 +57,6 @@ Deleted branch test (was 1296a4e).
 
 <h1> Exercises 2 </h1>
 
-
 ```
 $ touch home.html
 
@@ -190,6 +189,7 @@ M	team.html
 $ 
 
 ```
+
 
 <h1>Bundle 2</h1>
 
