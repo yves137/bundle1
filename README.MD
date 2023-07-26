@@ -329,7 +329,7 @@ To https://github.com/yves137/bundle1.git
 
 ```
 
-<h3> Bundle 3</h3>
+<h1> Bundle 3</h1>
 
 <h2>Exercise 1</h2>
 
