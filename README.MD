@@ -1,4 +1,4 @@
-<h1>Exercise 1 </h1>
+<h1 id="bundle1">Exercise 1 </h1>
 
 ```
 $ git init
@@ -191,7 +191,7 @@ $
 ```
 
 
-<h1>Bundle 2</h1>
+<h1 id="bundle2">Bundle 2</h1>
 
 <h2>Exercises 1</h2>
 
