@@ -328,3 +328,216 @@ To https://github.com/yves137/bundle1.git
    06d1e17..0edeca3  ft/service-redesign -> ft/service-redesign
 
 ```
+
+<h3> Bundle 3</h3>
+
+<h2>Exercise 1</h2>
+
+```
+$ git checkout -b ft/team-page
+Switched to a new branch 'ft/team-page'
+
+$ git add team.html 
+
+$ git commit -m "add changes on team.html bundle3-1"
+[ft/team-page 2ac45fc] add changes on team.html bundle3-1
+ 1 file changed, 1 insertion(+)
+
+$ git push -u origin ft/team-page 
+Username for 'https://github.com': yves137
+Password for 'https://yves137@github.com': 
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 349 bytes | 116.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote: 
+remote: Create a pull request for 'ft/team-page' on GitHub by visiting:
+remote:      https://github.com/yves137/bundle1/pull/new/ft/team-page
+remote: 
+To https://github.com/yves137/bundle1.git
+ * [new branch]      ft/team-page -> ft/team-page
+Branch 'ft/team-page' set up to track remote branch 'ft/team-page' from 'origin'.
+
+$ git checkout main 
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+$ git checkout -b ft/contact-page
+Switched to a new branch 'ft/contact-page'
+
+$ git checkout ft/team-page
+Switched to branch 'ft/team-page'
+Your branch is up to date with 'origin/ft/team-page'.
+
+$ git log 
+commit 2ac45fc12eadd1fd2667af4f1d211f643e1bd96b (HEAD -> ft/team-page, origin/ft/team-page)
+Author: yves173 <ykwizera67@gmail.com>
+Date:   Wed Jul 26 15:34:11 2023 +0200
+
+    add changes on team.html bundle3-1
+
+commit eb4dc206d3292745f7e814a4ff7241e2395e8b1c (origin/main, main, ft/contact-page)
+Author: yves173 <ykwizera67@gmail.com>
+Date:   Tue Jul 25 12:08:46 2023 +0200
+
+    update read me
+
+commit 962a1b316c30596100755fb4bd8244db5f69da20
+Author: yves173 <ykwizera67@gmail.com>
+Date:   Tue Jul 25 11:34:52 2023 +0200
+
+    service changes on main branh
+
+commit 9c60637871922d60827ae713fcc43967d2b1eec4
+Author: yves173 <ykwizera67@gmail.com>
+
+$ git checkout ft/contact-page
+Switched to branch 'ft/contact-page'
+
+$ git cherry-pick 2ac45fc12eadd1fd2667af4f1d211f643e1bd96b[ft/contact-page 4dda910] add changes on team.html bundle3-1
+ Date: Wed Jul 26 15:34:11 2023 +0200
+ 1 file changed, 1 insertion(+)
+
+$ git add contact.html
+
+$ git commit -m "create and add content on contact.htm"
+[ft/contact-page cc5bfdc] create and add content on contact.htm
+ 1 file changed, 11 insertions(+)
+ create mode 100644 contact.html
+
+$ git push -u origin ft/contact-page 
+Username for 'https://github.com': yves137
+Password for 'https://yves137@github.com': 
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 781 bytes | 781.00 KiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 2 local objects.
+remote: 
+remote: Create a pull request for 'ft/contact-page' on GitHub by visiting:
+remote:      https://github.com/yves137/bundle1/pull/new/ft/contact-page
+remote: 
+To https://github.com/yves137/bundle1.git
+ * [new branch]      ft/contact-page -> ft/contact-page
+Branch 'ft/contact-page' set up to track remote branch 'ft/contact-page' from 'origin'.
+
+$ git checkout -b ft/faq-page
+Switched to a new branch 'ft/faq-page'
+
+$ git add faq.html
+
+$ git commit -m "create and add content on faq.html"
+[ft/faq-page a43a738] create and add content on faq.html
+ 1 file changed, 11 insertions(+)
+ create mode 100644 faq.html
+
+$ git push -u origin ft/faq-page 
+Username for 'https://github.com': yves137
+Password for 'https://yves137@github.com': 
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 436 bytes | 436.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'ft/faq-page' on GitHub by visiting:
+remote:      https://github.com/yves137/bundle1/pull/new/ft/faq-page
+remote: 
+To https://github.com/yves137/bundle1.git
+ * [new branch]      ft/faq-page -> ft/faq-page
+Branch 'ft/faq-page' set up to track remote branch 'ft/faq-page' from 'origin'.
+
+$ git revert 2ac45fc12eadd1fd2667af4f1d211f643e1bd96b
+[ft/faq-page 9aee5a7] Revert "add changes on team.html bundle3-1"
+ 1 file changed, 1 deletion(-)
+
+$ git add .
+
+$ git commit -m "commit after revert on faq"
+On branch ft/faq-page
+Your branch is ahead of 'origin/ft/faq-page' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+$ git push -u origin ft/faq-page 
+Username for 'https://github.com': yves137
+Password for 'https://yves137@github.com': 
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 360 bytes | 360.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/yves137/bundle1.git
+   a43a738..9aee5a7  ft/faq-page -> ft/faq-page
+Branch 'ft/faq-page' set up to track remote branch 'ft/faq-page' from 'origin'.
+```
+
+<h2>Exercise 2</h2>
+
+```
+$ git checkout -b ft/home-page-redesign
+Switched to a new branch 'ft/home-page-redesign'
+
+$ git checkout main 
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+$ git add index.html 
+
+$ git commit -m "update context to index.html"
+[main 0dbd0e9] update context to index.html
+ 1 file changed, 1 insertion(+)
+
+$ git push 
+Username for 'https://github.com': yves137
+Password for 'https://yves137@github.com': 
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 324 bytes | 162.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/yves137/bundle1.git
+   eb4dc20..0dbd0e9  main -> main
+
+$ git checkout ft/home-page-redesign
+Switched to branch 'ft/home-page-redesign'
+
+$ git rebase main 
+Successfully rebased and updated refs/heads/ft/home-page-redesign.
+
+$ git add home.html
+
+$ git commit -m "update home.html"
+[ft/home-page-redesign 498d755] update home.html
+ 1 file changed, 1 insertion(+)
+
+$ git push -u origin ft/home-page-redesign 
+Username for 'https://github.com': yves137
+Password for 'https://yves137@github.com': 
+Enumerating objects: 17, done.
+Counting objects: 100% (17/17), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (14/14), done.
+Writing objects: 100% (14/14), 1.56 KiB | 199.00 KiB/s, done.
+Total 14 (delta 8), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (8/8), completed with 3 local objects.
+remote: 
+remote: Create a pull request for 'ft/home-page-redesign' on GitHub by visiting:
+remote:      https://github.com/yves137/bundle1/pull/new/ft/home-page-redesign
+remote: 
+To https://github.com/yves137/bundle1.git
+ * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
+Branch 'ft/home-page-redesign' set up to track remote branch 'ft/home-page-redesign' from 'origin'.
+```
