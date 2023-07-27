@@ -541,3 +541,131 @@ To https://github.com/yves137/bundle1.git
  * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
 Branch 'ft/home-page-redesign' set up to track remote branch 'ft/home-page-redesign' from 'origin'.
 ```
+
+<h1 id="bundle4"> Bundle 4</h1>
+
+<h2>Exercise 1</h2>
+
+```
+$ git checkout main 
+Already on 'main'
+Your branch is up to date with 'origin/main'.
+
+$ git remote add git-copy https://github.com/yves137/bundle1cp.git
+
+$ git add home.html 
+
+$ git commit -m "Added new changes to home.html"
+[main 8a28c53] Added new changes to home.html
+ 1 file changed, 1 insertion(+)
+
+$ git push origin main 
+Username for 'https://github.com': yves137
+Password for 'https://yves137@github.com': 
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 332 bytes | 166.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/yves137/bundle1.git
+   95ae8b9..8a28c53  main -> main
+
+$ git push git-copy main 
+Username for 'https://github.com': yves137
+Password for 'https://yves137@github.com': 
+Enumerating objects: 48, done.
+Counting objects: 100% (48/48), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (47/47), done.
+Writing objects: 100% (48/48), 7.65 KiB | 783.00 KiB/s, done.
+Total 48 (delta 26), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (26/26), done.
+To https://github.com/yves137/bundle1cp.git
+ * [new branch]      main -> main
+
+```
+
+<h2>Exercise 2</h2>
+
+```
+$ git checkout -b ft/footer
+Switched to a new branch 'ft/footer'
+
+$ git add footer.html 
+
+$ git commit -m "added footer.html"
+[ft/footer 81a4004] added footer.html
+ 1 file changed, 11 insertions(+)
+ create mode 100644 footer.html
+
+$ git add footer.html 
+
+$ git commit -m "added more changesto footer.html"
+[ft/footer 2645716] added more changesto footer.html
+ 1 file changed, 1 insertion(+)
+
+$ git push origin ft/footer 
+Username for 'https://github.com': yves137
+Password for 'https://yves137@github.com': 
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 717 bytes | 179.00 KiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'ft/footer' on GitHub by visiting:
+remote:      https://github.com/yves137/bundle1/pull/new/ft/footer
+remote: 
+To https://github.com/yves137/bundle1.git
+ * [new branch]      ft/footer -> ft/footer
+
+$ git checkout main 
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+$ git checkout -b ft/squashing
+Switched to a new branch 'ft/squashing'
+
+$ git merge --squash ft/footer 
+Updating 8a28c53..2645716
+Fast-forward
+Squash commit -- not updating HEAD
+ footer.html | 12 ++++++++++++
+ 1 file changed, 12 insertions(+)
+ create mode 100644 footer.html
+
+$ git status 
+On branch ft/squashing
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   footer.html
+   
+$ git add footer.html 
+
+$ git commit -m "footer changes squashing"
+[ft/squashing 236fb36] footer changes squashing
+ 1 file changed, 12 insertions(+)
+ create mode 100644 footer.html
+
+$ git push origin ft/squashing 
+yUsername for 'https://github.com': yves137
+Password for 'https://yyves137@github.com': 
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 450 bytes | 450.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'ft/squashing' on GitHub by visiting:
+remote:      https://github.com/yves137/bundle1/pull/new/ft/squashing
+remote: 
+To https://github.com/yves137/bundle1.git
+ * [new branch]      ft/squashing -> ft/squashing
+
+```
