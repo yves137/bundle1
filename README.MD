@@ -674,20 +674,20 @@ To https://github.com/yves137/bundle1.git
 
 <h2>Exercise 1</h2>
 
-```
+
 <p><a href="https://yves137.github.io/bundle1/"> click here to view the GIT-PAGE</a></p>
 
-```
+
 
 <h2>Exercise 2</h2>
 
- ```
+ 
  <p><a href="https://github.com/yves137/git-cafe-exercise">Link to git-cafe-exercise folked project </a></p>
 
  <p><a href="https://github.com/octangroup/git-cafe-exercise/pull/215">Link to my PR</a></p>
 
  <h3> Other Git Script</h3>
-
+```
 $ git clone https://github.com/yves137/git-cafe-exercise.git
 Cloning into 'git-cafe-exercise'...
 remote: Enumerating objects: 107, done.
