@@ -687,7 +687,9 @@ To https://github.com/yves137/bundle1.git
  <p><a href="https://github.com/octangroup/git-cafe-exercise/pull/215">Link to my PR</a></p>
 
  <h3> Other Git Script</h3>
+
 ```
+
 $ git clone https://github.com/yves137/git-cafe-exercise.git
 Cloning into 'git-cafe-exercise'...
 remote: Enumerating objects: 107, done.
