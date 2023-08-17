@@ -719,3 +719,102 @@ To https://github.com/yves137/git-cafe-exercise.git
    d1d3f9c..6c4a02a  main -> main
 
  ```
+
+ <h1 id="#bundle6"> Bundle 6</h1>
+
+ <h2>Exercise 1<h2>
+
+ <p><a href="https://github.com/octangroup/git-cafe-exercise/pull/294">Link to the PR</a> </p>
+
+ ```
+$ git checkout -b menu-br
+Switched to a new branch 'menu-br'
+
+$ git add menu.html 
+
+$ git commit -m "add menu.html"
+[menu-br 630fca3] add menu.html
+ 1 file changed, 11 insertions(+)
+ create mode 100644 menu.html
+
+$ git push origin menu-br 
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 423 bytes | 105.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'menu-br' on GitHub by visiting:
+remote:      https://github.com/yves137/git-cafe-exercise/pull/new/menu-br
+remote: 
+To https://github.com/yves137/git-cafe-exercise.git
+ * [new branch]      menu-br -> menu-br
+
+ ```
+
+ 
+ <h2>Exercise 2<h2>
+
+ <p><a href="https://github.com/octangroup/git-cafe-exercise/pull/295">Link to the PR</a> </p>
+
+ ```
+$ git checkout -b fixing-bug-br
+Switched to a new branch 'fixing-bug-br'
+
+$ git add index-4.html 
+
+$ git commit -m "change title on index4.html"
+[fixing-bug-br 769ccf9] change title on index4.html
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+$ git push origin fixing-bug-br 
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 309 bytes | 154.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote: 
+remote: Create a pull request for 'fixing-bug-br' on GitHub by visiting:
+remote:      https://github.com/yves137/git-cafe-exercise/pull/new/fixing-bug-br
+remote: 
+To https://github.com/yves137/git-cafe-exercise.git
+ * [new branch]      fixing-bug-br -> fixing-bug-br
+
+ ```
+
+
+  <h2>Exercise 3<h2>
+
+ <p><a href="https://github.com/octangroup/git-cafe-exercise/pull/296">Link to the PR</a> </p>
+
+ ```
+$ git checkout -b small-hotfix-br
+Switched to a new branch 'small-hotfix-br'
+
+$ git add index-4.html 
+
+$ git commit -m "change phone number on index.html"
+[small-hotfix-br 76712f0] change phone number on index.html
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+$ git push  origin small-hotfix-br 
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 307 bytes | 102.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote: 
+remote: Create a pull request for 'small-hotfix-br' on GitHub by visiting:
+remote:      https://github.com/yves137/git-cafe-exercise/pull/new/small-hotfix-br
+remote: 
+To https://github.com/yves137/git-cafe-exercise.git
+ * [new branch]      small-hotfix-br -> small-hotfix-br
+
+ ```
+
