@@ -720,9 +720,9 @@ To https://github.com/yves137/git-cafe-exercise.git
 
  ```
 
- <h1 id="#bundle6"> Bundle 6</h1>
+ <h1 id="bundle6"> Bundle 6</h1>
 
- <h2>Exercise 1<h2>
+ <h2>Exercise 1</h2>
 
  <p><a href="https://github.com/octangroup/git-cafe-exercise/pull/294">Link to the PR</a> </p>
 
@@ -755,7 +755,7 @@ To https://github.com/yves137/git-cafe-exercise.git
  ```
 
  
- <h2>Exercise 2<h2>
+ <h2>Exercise 2</h2>
 
  <p><a href="https://github.com/octangroup/git-cafe-exercise/pull/295">Link to the PR</a> </p>
 
@@ -787,7 +787,7 @@ To https://github.com/yves137/git-cafe-exercise.git
  ```
 
 
-  <h2>Exercise 3<h2>
+  <h2>Exercise 3</h2>
 
  <p><a href="https://github.com/octangroup/git-cafe-exercise/pull/296">Link to the PR</a> </p>
 
